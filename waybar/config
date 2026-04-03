@@ -1,0 +1,30 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-center": ["clock"],
+  "modules-right": ["network", "pulseaudio", "battery", "custom/my-script"],
+  
+  "sway/workspaces": {
+    "all-outputs": true,
+    "disable-scroll": false
+  },
+  "sway/mode": {},
+  "clock": {
+    "interval": 60.
+    "format": "{%d.%m.%Y %H:%M:%S}",
+  },
+  "network": {
+    "format-up": "{essid} {ipaddr}",
+    "format-down": "Disconnected",
+  },
+  "pulseaudio": {
+    "format": "{volume}%",
+  },
+//  "custom/my-script": { "exec": "~/.config/waybar/scripts/myscript.sh",
+//    "interval": 10,
+//  },
+  "style": "/home/user/.config/waybar/style.css",
+  "tooltip": false,
+  "sep": " | "
+}

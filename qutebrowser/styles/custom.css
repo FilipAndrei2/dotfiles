@@ -1,0 +1,149 @@
+/* Gruvbox Dark Global Stylesheet */
+
+/* Culori Gruvbox Dark */
+:root {
+    --bg: #282828;
+    --bg-alt: #3c3836;
+    --fg: #ebdbb2;
+    --fg-alt: #d5c4a1;
+    --red: #fb4934;
+    --green: #b8bb26;
+    --yellow: #fabd2f;
+    --blue: #83a598;
+    --purple: #d3869b;
+    --aqua: #8ec07c;
+    --orange: #fe8019;
+}
+
+/* Reset bazic */
+* {
+    background: none !important;
+    color: inherit !important;
+    border-color: inherit !important;
+}
+
+/* Fundal și text */
+body,
+html {
+    background-color: var(--bg) !important;
+    color: var(--fg) !important;
+    font-family: "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* Link-uri */
+a,
+a:visited {
+    color: var(--green) !important;
+    /* text-decoration: underline !important; */
+}
+
+a:hover,
+a:focus {
+    color: var(--aqua) !important;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--yellow) !important;
+}
+
+/* Paragraf și text general */
+p,
+span,
+li,
+div {
+    color: var(--fg) !important;
+}
+
+/* Butoane */
+button,
+input[type="button"],
+input[type="submit"] {
+    background-color: var(--bg-alt) !important;
+    color: var(--red) !important;
+    border: 1px solid var(--fg-alt) !important;
+    border-radius: 4px !important;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background-color: var(--bg) !important;
+    color: var(--yellow) !important;
+}
+
+/* Formulare și input-uri */
+input,
+textarea,
+select {
+    background-color: var(--bg-alt) !important;
+    color: var(--fg) !important;
+    border: 1px solid var(--fg-alt) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--fg-alt) !important;
+}
+
+/* Tabele */
+table {
+    border-collapse: collapse !important;
+    background-color: var(--bg) !important;
+    color: var(--fg) !important;
+}
+
+th,
+td {
+    border: 1px solid var(--bg-alt) !important;
+    padding: 4px 8px !important;
+}
+
+/* Listă */
+ul,
+ol {
+    color: var(--fg) !important;
+}
+
+/* Cod / sintaxă */
+code,
+pre,
+kbd,
+samp {
+    background-color: var(--bg-alt) !important;
+    color: var(--orange) !important;
+    font-family: monospace !important;
+}
+
+/* Elemente interactive */
+a,
+button,
+input,
+textarea,
+select {
+    transition: all 0.2s ease !important;
+}
+
+/* Scrollbar (pentru browsere moderne) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-alt);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--fg-alt);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--fg);
+}

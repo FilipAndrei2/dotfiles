@@ -329,8 +329,10 @@ c.colors.tabs.pinned.selected.odd.bg = c.colors.tabs.pinned.selected.even.bg
 # Foreground color of pinned selected odd tabs.
 c.colors.tabs.pinned.selected.odd.fg = c.colors.tabs.selected.odd.fg
 
-c.content.user_stylesheets = ["~/.config/qutebrowser/styles/gruv-dark.css"]
+c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.darkmode.policy.images = "smart"
 
+# c.content.user_stylesheets = ["~/.config/qutebrowser/styles/custom.css"]
 # Background color for webpages if unset (or empty to use the theme's
 # color).
 # c.colors.webpage.bg = bg4
