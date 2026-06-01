@@ -3,28 +3,48 @@
   "position": "top",
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": ["clock"],
-  "modules-right": ["network", "pulseaudio", "battery", "custom/my-script"],
-  
-  "sway/workspaces": {
-    "all-outputs": true,
-    "disable-scroll": false
-  },
+  "modules-right": ["cpu", "memory", "battery", "network", "custom/shortcuts"],
+
+  "sway/workspaces": { "all-outputs": true },
   "sway/mode": {},
+
   "clock": {
-    "interval": 60.,
-    "format": "{%d.%m.%Y %H:%M:%S}",
+    "interval": 1,
+    "format": "{:%d.%m.%Y %H:%M:%S}"
   },
+
+  "cpu": {
+    "format": "CPU: {usage}%",
+    "format-alt": "{usage}%"
+  },
+
+  "memory": {
+    "format": "RAM: {used}/{total}MB"
+  },
+
+  "battery": {
+  "states": {
+    "warning": 30,
+    "critical": 15
+  },
+  "format": "{capacity}%",
+  "format-charging": "Battery charging: {capacity}%",
+  "format-discharging": "Battery: {capacity}%",
+  "format-full": "Battery full!",
+  "interval": 30
+},
+
   "network": {
-    "format-up": "{essid} {ipaddr}",
-    "format-down": "Disconnected",
+    "format-up": "🌐 {essid} {ipaddr}",
+    "format-down": "Disconnected"
   },
-  "pulseaudio": {
-    "format": "{volume}%",
+
+  "custom/shortcuts": {
+    "exec": "echo '⛏️ Nerd bar ready!'",
+    "interval": 10
   },
-//  "custom/my-script": { "exec": "~/.config/waybar/scripts/myscript.sh",
-//    "interval": 10,
-//  },
-  "style": "/home/user/.config/waybar/style.css",
+
+  "style": "~/.config/waybar/style.css",
   "tooltip": false,
   "sep": " | "
 }
